@@ -3,6 +3,7 @@ package com.bankinngApplication.Banking.Application.entity;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class User {
