@@ -1,6 +1,7 @@
 package com.bankinngApplication.Banking.Application.entity;
 
 import jakarta.persistence.*;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
@@ -10,6 +11,7 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Setter
     private String type; // DEPOSIT, WITHDRAW, TRANSFER
     private double amount;
 
@@ -18,4 +20,5 @@ public class Transaction {
     @ManyToOne
     @JoinColumn(name = "account_id")
     private Account account;
+
 }
